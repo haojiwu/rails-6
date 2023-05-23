@@ -1,5 +1,6 @@
 databases:
   - name: myrailssite
+    region: frankfurt
     databaseName: myrailssite
     user: myrailssite
 
@@ -7,6 +8,7 @@ services:
   - type: web
     name: myrailssite
     env: ruby
+    egion: frankfurt
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     autoDeploy: false
